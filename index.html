@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <!-- ページのタイトルを設定 -->
+  <title>地理院地図Vector及び最適化ベクトルタイル</title>
+  <!-- 文字エンコーディングをUTF-8に設定 -->
+  <meta charset="UTF-8">
+  <!-- ビューポートの設定。レスポンシブ対応のため -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- MapLibre GL JSのスクリプトを読み込む -->
+  <script src="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.js" crossorigin="anonymous"></script>
+  <!-- MapLibre GL JSのスタイルシートを読み込む -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.css" crossorigin="anonymous">
+  <!-- PMTilesのスクリプトを読み込む -->
+  <script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+  <!-- 外部スタイルシートを読み込む -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 地図表示用のdiv要素 -->
+  <div id="map"></div>
+  <div id="panel">
+    <details>
+      <summary class="layer">
+        <strong>ベースマップ切り替え</strong>
+      </summary>
+      <fieldset>
+        <div class="radio-button-container">
+          <div>
+            <input type="radio" id="experimental" name="layer" value="experimental" checked>
+            <label for="experimental">地理院地図Vector</label><br>
+            <input type="radio" id="optimal" name="layer" value="optimal">
+            <label for="optimal">最適化ベクトルタイル</label>
+          </div>
+        </div>
+      </fieldset>
+    </details>
+  </div>
+  <!-- メインのJavaScriptファイルを読み込む -->
+  <script src="main.js"></script>
+  </script>
+</body>
+
+</html>

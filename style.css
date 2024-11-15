@@ -1,0 +1,36 @@
+/* ページ全体の余白をなくす */
+body {
+  margin: 0;
+}
+
+/* 地図表示用のdiv要素を画面全体に広げる */
+#map {
+  /* 高さを100%に設定 */
+  height: 100%;
+  /* 幅を100%に設定 */
+  width: 100%;
+}
+
+#panel {
+  padding: 6px 8px;
+  font: 12px/14px Arial, Helvetica, sans-serif;
+  color: navy;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: fit-content;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.layer {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.radio-button-container {
+  display: flex;
+  justify-content: start;
+}
