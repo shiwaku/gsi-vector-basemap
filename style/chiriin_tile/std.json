@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "GSI Standard Map",
+  "sources": {
+    "gsi-std": {
+      "type": "raster",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png"
+      ],
+      "minzoom": 5,
+      "maxzoom": 18,
+      "tileSize": 256,
+      "attribution": "地理院タイル"
+    }
+  },
+  "layers": [
+    {
+      "id": "gsi-std-layer",
+      "type": "raster",
+      "source": "gsi-std"
+    }
+  ]
+}

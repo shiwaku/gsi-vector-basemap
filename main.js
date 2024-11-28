@@ -3,6 +3,7 @@ let protocol = new pmtiles.Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const styles = {
+  chiriin: "./style/chiriin_tile/std.json",
   experimental: "./style/experimental_bvmap/std.json",
   optimal: "./style/optimal_bvmap/std.json",
 };
@@ -10,7 +11,7 @@ const styles = {
 // マップの初期化
 const map = new maplibregl.Map({
   container: "map",
-  style: styles.experimental, // マップのスタイルを指定
+  style: styles.chiriin, // マップのスタイルを指定
   center: [139.7758, 35.6595], // マップの初期中心点を指定（経度, 緯度）
   zoom: 8.48, // マップの初期ズームレベルを設定
   pitch: 0, // マップの初期ピッチ（傾き）を指定
